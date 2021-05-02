@@ -58,7 +58,7 @@ let animate=(ctx,images,animation,callback) =>{
 };
 
 
-loadImage((images) =>{
+loadImages((images) =>{
     let queuedAnimations=[];
 
     let aux=()=>{
