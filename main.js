@@ -8,8 +8,8 @@ let loadImage = (src,callback) =>{
     img.src=src;
 };
 
-let imagePath =(frameNubmer,animation) => {
-return "https://github.com/rahul-singhania/rahul-singhania.github.io/tree/main/images/"+ animation +"/"+frameNumber +".png?raw=true";
+let imagePath =(frameNumber,animation) => {
+return "https://github.com/rahul-singhania/rahul-singhania.github.io/tree/main/images/"+ animation +"/"+ frameNumber +".png?raw=true";
 };
 let frames={
     idle:[1,2,3,4,5,6,7,8],
