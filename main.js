@@ -28,8 +28,8 @@ let loadImages=(callback) =>{
         let animationFrames=frames[animation];
         imagesToLoad=imagesToLoad +animationFrames.length;
 
-        animationFrames.forEach((frameNubmer) =>{
-            let path=imagePath(frameNubmer,animation);
+        animationFrames.forEach((frameNumber) =>{
+            let path=imagePath(frameNumber,animation);
 
             loadImage(path,(image) =>{
    images[animation][frameNumber-1]=image;
