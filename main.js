@@ -21,10 +21,10 @@ let frames={
 };
 
 let loadImages=(callback) =>{
-    let images ={idle: [],kick: [],punch: [],backward: [],forward:[]};
+    let images ={idle: [],kick: [],punch: [],backward: [],forward:[],block:[]};
 
     let imagesToLoad=0;
-    ["idle","kick","punch","backward","forward"].forEach((animation) =>{
+    ["idle","kick","punch","backward","forward","block"].forEach((animation) =>{
         let animationFrames=frames[animation];
         imagesToLoad=imagesToLoad +animationFrames.length;
 
@@ -83,6 +83,9 @@ loadImages((images) =>{
 document.getElementById("forward").onclick=()=>{
     queuedAnimations.push("forward");
 };
+    document.getElementById("block").onclick=()=>{
+    queuedAnimations.push("block");
+};
 document.addEventListener("keyup",(event)=>{
     const key=event.key;
     if(key==="ArrowLeft")
@@ -95,6 +98,9 @@ document.addEventListener("keyup",(event)=>{
     }
         else if(key === "f"){
         queuedAnimations.push("forward");
+    }
+      else if(key === "ArrowDown"){
+        queuedAnimations.push("block");
     }
 });
 
